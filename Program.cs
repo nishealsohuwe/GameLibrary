@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using GameLibrary.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SchoolContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("GameLibraryContext") ?? throw new InvalidOperationException("Connection string 'GameLibraryContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

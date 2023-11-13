@@ -20,12 +20,12 @@
                 @Html.ActionLink("Huwe", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Students", "Index", "Student")</li>
+                        <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                        <li>@Html.ActionLink("Instructors", "Index", "Instructor")</li>
+                        <li>@Html.ActionLink("Departments", "Index", "Department")</li>
                     </ul>
                 </div>
             </div>
